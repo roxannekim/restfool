@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+    <a href="https://10.17.90.31:3003"></a>
+    <title> 🎶 </title>
+</head>
+
+<body>
+    <div class="container" align="center"></div>
+
+    <div class="jumbotron" align="center">
+        <h1>  🎤 ROBO-KARAOKE 🎤 </h1>
+        <hr>
+        <div class="panel panel-primary">
+            <form action="/select/:songid" method="POST">
+                <select class="btn btn-warning" select-lg>
+  <option value="0">I Will Survive by Gloria Gaynor</option>
+  <option value="1">Billie Jean by Michael Jackson</option>
+  <option value="2">I Wanna Dance with Somebody by Whitney Houston</option>
+  <option value="3">Bohemian Rhapsody by Queen</option>
+<option value="4">Zombie by The Cranberries</option>
+</select>
+
+
+                <button class="btn btn-warning" onclick="performGetRequest1()" id="value">SELECT</button>
+
+            </form>
+            <br>
+            <button onclick="myFunction()" class="btn btn-danger" id="myDIV"> PLAY </button>
+            <br>
+            <br>
+            <form action="/rate/:value" method="POST">
+                <button class="btn btn-primary" id="0"> < DOWN </button>
+                <button class="btn btn-primary" id="1"> UP > </button>
+            </form>
+            <br>
+            <form action="/compliment" method="POST">
+                <button onclick="myFunction()" class="btn btn-info" id="myDIV"> COMPLIMENT </button>
+            </form>
+        </div>
+        <hr>
+    </div>
+
+    </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.innerHTML === " PLAY ") {
+                x.innerHTML = " PAUSE ";
+            } else {
+                x.innerHTML = " PLAY ";
+            }
+        }
+    </script>
+</body>
+
+
+</html>
